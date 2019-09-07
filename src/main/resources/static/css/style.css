@@ -1,79 +1,361 @@
+@media (max-width: 767px) {
 
-   @media (max-width: 767px){
-       
-       body{
-           padding-top: 0;
-       }
-       #header .navbar{
-           position: relative !important;
-       }
-       #header .navbar{
-           padding-bottom: 0;
-       }   
-   }
+	body {
+		padding-top: 0;
+	}
 
-   @media (min-width: 768px){
-       body{
-           padding-top: 82px;
-       }
-       #header .navbar{
-           border-radius: 0;
-           padding: 15px 0;
-       }
-       #header .navbar-nav>li>a{
-           padding: 15px 0;
-       }
- 
-   }
- 
-   @media (min-width: 768px) and (max-width: 991px){
- 
-   }
-   
-   @media (min-width: 992px){
+	#header .navbar {
+		position: relative !important;
+	}
 
+	#header .navbar {
+		padding-bottom: 0;
+	}
+   #issuecontent{
+       margin-top: 10px;
    }
-.carousel-indicators{
-    bottom: 0px;
 }
-   #header .navbar-default{
-       border:0;
-       margin-bottom: 0;
-       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-       z-index: 1000;
-       background-color: rgba(255,255,255,0.9);
-   }
-   #header .navbar-default .navbar-nav>li>a{
-       font-size: 16px;
-       padding: 16px 25px 5px !important;
-   }
-   #header .navbar-default .navbar-nav>li>a:hover{
-       
-   }
-   #header .navbar-default .navbar-nav>.active>a, #header .navbar-default .navbar-nav>.active>a:hover, #header .navbar-default .navbar-nav>.active>a:focus{
-      
-       background-color: rgba(255,255,255,0);
-   }
-   #header .navbar-default .navbar-toggle .icon-bar{
-       background-color: none;
-   }
-   #header .navbar-default .navbar-nav>li .line-top{
-       border-top: 1px solid ;
-       width: 18px;
-       margin: auto;
-   }
-.footer{
-    padding:0;
-    padding-top: 10px;
-    margin-top: 20px;
-    background-color: #277CBF;
+
+@media (min-width: 768px) {
+	body {
+		padding-top: 82px;
+	}
+
+	#header .navbar {
+		border-radius: 0;
+		padding: 15px 0;
+	}
+
+	#header .navbar-nav>li>a {
+		padding: 15px 0;
+	}
+
 }
-.footer .footer-list ul{
-    margin: 0 0 0 0;
-    list-style: none;
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
 }
-.footer .footer-list ul li a{
-    color: #f5f5f5;
+
+@media (min-width: 992px) {
+    .carousel-inner>.item>a>img{
+        padding-top: 80px;
+    }
+    .issue-head h3 {
+    	font-size: 18px;
+    	margin-bottom: 20px;
+    	padding-left: 10px;
+    }
+   #issuecontent{
+       margin-top: 100px;
+   }
 }
-   
-   
+
+/**
+	* 控制logo
+	*/
+@media (max-width:550px) {
+	.navbar-brand img {
+		display: none
+	}
+
+	.navbar-brand .logo-min {
+		display: block !important;
+	}
+}
+
+@media (max-width:1000px) {
+	.abstract-text p {
+		font-size: 15px !important;
+	}
+}
+.carousel-indicators {
+	bottom: 0px;
+}
+
+#header .navbar-default {
+	border: 0;
+	margin-bottom: 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	
+}
+
+#header .navbar-default .navbar-nav>li>a {
+	font-size: 16px;
+	padding: 16px 25px 10px  !important;
+}
+
+#header .navbar-default .navbar-nav>li>a:hover {
+   background:#e7e7e7 ;
+}
+.navbar-default .navbar-nav>.active>a{
+    background: none;
+}
+#header .navbar-default .navbar-nav>.active>a{
+    background-color: none;
+},
+#header .navbar-default .navbar-nav>.active>a:hover{
+    background-color:none;
+},
+#header .navbar-default .navbar-nav>.active>a:focus {
+    background: none;
+}
+
+#header .navbar-default .navbar-toggle .icon-bar {
+	background-color: none;
+}
+
+#header .navbar-default .navbar-nav>li .line-top {
+	border-top: 1px solid;
+	width: 18px;
+	margin: auto;
+}
+.item img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+	padding: 0;
+	padding-top: 10px;
+	margin-top: 20px;
+	background-color: #277CBF;
+}
+
+.footer .footer-list ul {
+	margin: 0 0 0 0;
+	list-style: none;
+}
+
+.footer .footer-list ul li a {
+	color: #f5f5f5;
+    text-decoration:none
+}
+
+
+
+/**
+	* 代码初始化
+	*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+	font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: couriernew, courier, monospace;
+}
+
+small {
+	font-size: 12px;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+legend {
+	color: #000;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 一级页面 */
+.abstract-text{
+   padding:50px 40px 50px 50px;
+}
+.abstract-text h3{
+    font-size: 25px;
+}
+/**
+	* 二级页面
+	*/
+
+
+.issue-nav li {
+	width: 252px;
+	height: 39px;
+	line-height: 39px;
+	background-color: rgba(244, 247, 252, 1);
+	margin: 15px 0 0 0;
+	padding: 0 10px;
+	color: rgba(39, 124, 191, 1);
+	font-size: 14px;
+}
+.issue_p1{
+   text-indent:2em;
+}
+.issue_p2{
+    margin-top:20px;
+}
+.issue-title {
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.issue-content {
+	margin-top: 40px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.issue-nav a {
+	background: rgba(0, 0, 0, 0) !important;
+	color: rgba(39, 124, 191, 1) !important;
+	border: 0 !important;
+	text-decoration: none;
+}
+
+.issue-nav li,
+.nav-tabs {
+	float: none !important;
+	border: 0 !important;
+}
+
+/**
+	 * 页脚处理
+	 */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.main {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;
+	display: block;
+	padding-bottom: 155px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	clear: both;
+	height: 150px !important;
+}
+
+@media (max-width:1000px) {
+	.footer img {
+		display: none;
+	}
+}
+
+/**
+ * project-content
+ */
+@media (max-width:765px) {
+	.project-content{
+		padding-top: 20px !important;
+	}
+}
+
+.project-row{
+	border-bottom:1px solid #BBBBBB ;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.project-row img{
+	max-width: 100%;
+	height: 148px;
+}
+.project-row span{
+	font-size: 28px;
+}
+.project-load{
+	max-width: 450px;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgba(225, 225, 225, 1);
+	color: rgba(62, 58, 57, 1);
+	font-size: 18px;
+	text-align: center;
+	margin:40px auto;
+}
