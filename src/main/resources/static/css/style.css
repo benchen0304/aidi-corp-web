@@ -144,13 +144,13 @@ width : 970px;
 margin : 0 auto;
 }
 body {
-background : url('../images/bg/blue/bg.gif') top repeat-x;
+background : url('../images/bg/bg.gif') top repeat-x;
 }
 #logo a {
-background : url('../images/logo-light.png') no-repeat;
+background : url('../images/logo.png') no-repeat;
 }
 #slider {
-background : url('../images/bg/slider-light.png') bottom center no-repeat;
+background : url('../images/colors/blue/slider-light.png') bottom center no-repeat;
 }
 #footer {
 background-color : #003746;
@@ -295,7 +295,7 @@ height : 331px;
 position : relative;
 }
 #slider .inner {
-height : 332px;
+height : 280px;
 position : relative;
 }
 #slider .panel {

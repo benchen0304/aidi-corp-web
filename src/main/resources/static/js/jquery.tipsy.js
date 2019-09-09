@@ -1,13 +1,13 @@
-(function($) {
-    $.fn.tipsy = function(options) {
+(function ($) {
+    $.fn.tipsy = function (options) {
 
         options = $.extend({}, $.fn.tipsy.defaults, options);
-        
-        return this.each(function() {
-            
+
+        return this.each(function () {
+
             var opts = $.fn.tipsy.elementOptions(this, options);
-            
-            $(this).hover(function() {
+
+            $(this).hover(function () {
 
                 $.data(this, 'cancel.tipsy', true);
 
@@ -18,7 +18,7 @@
                     $.data(this, 'active.tipsy', tip);
                 }
 
-                if ($(this).attr('title') || typeof($(this).attr('original-title')) != 'string') {
+                if ($(this).attr('title') || typeof ($(this).attr('original-title')) != 'string') {
                     $(this).attr('original-title', $(this).attr('title') || '').removeAttr('title');
                 }
 
@@ -39,16 +39,28 @@
 
                 switch (gravity.charAt(0)) {
                     case 'n':
-                        tip.css({top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-north');
+                        tip.css({
+                            top: pos.top + pos.height,
+                            left: pos.left + pos.width / 2 - actualWidth / 2
+                        }).addClass('tipsy-north');
                         break;
                     case 's':
-                        tip.css({top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-south');
+                        tip.css({
+                            top: pos.top - actualHeight,
+                            left: pos.left + pos.width / 2 - actualWidth / 2
+                        }).addClass('tipsy-south');
                         break;
                     case 'e':
-                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}).addClass('tipsy-east');
+                        tip.css({
+                            top: pos.top + pos.height / 2 - actualHeight / 2,
+                            left: pos.left - actualWidth
+                        }).addClass('tipsy-east');
                         break;
                     case 'w':
-                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}).addClass('tipsy-west');
+                        tip.css({
+                            top: pos.top + pos.height / 2 - actualHeight / 2,
+                            left: pos.left + pos.width
+                        }).addClass('tipsy-west');
                         break;
                 }
 
@@ -58,33 +70,35 @@
                     tip.css({visibility: 'visible'});
                 }
 
-            }, function() {
+            }, function () {
                 $.data(this, 'cancel.tipsy', false);
                 var self = this;
-                setTimeout(function() {
+                setTimeout(function () {
                     if ($.data(this, 'cancel.tipsy')) return;
                     var tip = $.data(self, 'active.tipsy');
                     if (opts.fade) {
-                        tip.stop().fadeOut(function() { $(this).remove(); });
+                        tip.stop().fadeOut(function () {
+                            $(this).remove();
+                        });
                     } else {
                         tip.remove();
                     }
                 }, 100);
 
             });
-            
+
         });
-        
+
     };
-    
+
     // Overwrite this method to provide options on a per-element basis.
     // For example, you could store the gravity in a 'tipsy-gravity' attribute:
     // return $.extend({}, options, {gravity: $(ele).attr('tipsy-gravity') || 'n' });
     // (remember - do not modify 'options' in place!)
-    $.fn.tipsy.elementOptions = function(ele, options) {
+    $.fn.tipsy.elementOptions = function (ele, options) {
         return $.metadata ? $.extend({}, options, $(ele).metadata()) : options;
     };
-    
+
     $.fn.tipsy.defaults = {
         fade: false,
         fallback: '',
@@ -92,13 +106,13 @@
         html: false,
         title: 'title'
     };
-    
-    $.fn.tipsy.autoNS = function() {
+
+    $.fn.tipsy.autoNS = function () {
         return $(this).offset().top > ($(document).scrollTop() + $(window).height() / 2) ? 's' : 'n';
     };
-    
-    $.fn.tipsy.autoWE = function() {
+
+    $.fn.tipsy.autoWE = function () {
         return $(this).offset().left > ($(document).scrollLeft() + $(window).width() / 2) ? 'e' : 'w';
     };
-    
+
 })(jQuery);
